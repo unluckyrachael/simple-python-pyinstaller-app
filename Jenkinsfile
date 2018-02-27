@@ -46,7 +46,7 @@ pipeline {
            steps {
                // Upload deployment assets to S3
                sh "whoami"
-               sh "aws s3 cp dist/add2vals s3://rtt-jenkins-bucket/training3/add2vals --region us-east-2 --acl public-read-write"
+               sh "aws s3 cp dist/add2vals s3://rtt-jenkins-bucket/training1/add2vals --region us-east-2 --acl public-read-write"
             }
         }
     }
