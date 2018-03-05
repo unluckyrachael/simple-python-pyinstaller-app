@@ -61,7 +61,7 @@ pipeline {
                    repository: 'RepositoryName',
                    credentialsId: 'NexusDefault',
                    artifacts: [
-                       [artifactId: projectName,
+                       [artifactId: 'testArtifact',
                         classifier: '',
                         file: 'dist/add2vals',
                         type: 'binary']
