@@ -58,7 +58,7 @@ pipeline {
                    nexusUrl: 'ec2-18-218-233-46.us-east-2.compute.amazonaws.com:8081/nexus',
                    groupId: 'com.example',
                    version: '1.0',
-                   repository: 'Releases',
+                   repository: 'releases',
                    credentialsId: 'NexusDefault',
                    artifacts: [
                        [artifactId: 'testArtifact',
