@@ -56,15 +56,15 @@ pipeline {
                    nexusVersion: 'nexus2',
                    protocol: 'http',
                    nexusUrl: 'ec2-18-218-233-46.us-east-2.compute.amazonaws.com:8081/nexus',
-                   groupId: 'com.example',
+                   groupId: 'rtt.example',
                    version: '1.0',
                    repository: 'releases',
                    credentialsId: 'NexusDefault',
                    artifacts: [
-                       [artifactId: 'testArtifact',
+                       [artifactId: 'add2vals',
                         classifier: '',
                         file: 'dist/add2vals',
-                        type: 'binary']
+                        type: '']
                    ]
                )
            }
