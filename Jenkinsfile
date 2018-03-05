@@ -50,21 +50,24 @@ pipeline {
             }
         }
         stage("NexusPublish") {
-           nexusArtifactUploader(
-               nexusVersion: 'nexus2',
-               protocol: 'http',
-               nexusUrl: 'ec2-18-218-233-46.us-east-2.compute.amazonaws.com:8081/nexus',
-               groupId: 'com.example',
-               version: version,
-               repository: 'RepositoryName',
-               credentialsId: 'NexusDefault',
-               artifacts: [
-                   [artifactId: projectName,
-                    classifier: '',
-                    file: 'dist/add2vals',
-                    type: 'binary']
-               ]
-            )
+           agent any
+           steps {
+               nexusArtifactUploader(
+                   nexusVersion: 'nexus2',
+                   protocol: 'http',
+                   nexusUrl: 'ec2-18-218-233-46.us-east-2.compute.amazonaws.com:8081/nexus',
+                   groupId: 'com.example',
+                   version: version,
+                   repository: 'RepositoryName',
+                   credentialsId: 'NexusDefault',
+                   artifacts: [
+                       [artifactId: projectName,
+                        classifier: '',
+                        file: 'dist/add2vals',
+                        type: 'binary']
+                   ]
+               )
+           }
         }
     }
 }
