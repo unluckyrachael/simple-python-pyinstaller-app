@@ -45,7 +45,7 @@ pipeline {
            agent any
            steps {
                nexusArtifactUploader(
-                   nexusVersion: 'nexus2',
+                   nexusVersion: 'nexus3',
                    protocol: 'http',
                    nexusUrl: 'ec2-18-218-14-104.us-east-2.compute.amazonaws.com:8081',
                    groupId: 'rtt.example',
