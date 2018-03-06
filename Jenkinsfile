@@ -55,7 +55,7 @@ pipeline {
                nexusArtifactUploader(
                    nexusVersion: 'nexus2',
                    protocol: 'http',
-                   nexusUrl: 'ec2-18-218-233-46.us-east-2.compute.amazonaws.com:8081/nexus',
+                   nexusUrl: 'ec2-18-218-242-18.us-east-2.compute.amazonaws.com:8081/nexus',
                    groupId: 'rtt.example',
                    version: '1.0',
                    repository: 'releases',
