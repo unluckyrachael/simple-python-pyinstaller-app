@@ -48,9 +48,9 @@ pipeline {
                    nexusVersion: 'nexus3',
                    protocol: 'http',
                    nexusUrl: 'ec2-18-218-14-104.us-east-2.compute.amazonaws.com:8081',
-                   groupId: 'rtt.example',
+                   groupId: 'apps',
                    version: '1.0',
-                   repository: 'maven-releases',
+                   repository: 'rtt',
                    credentialsId: 'NexusDefault',
                    artifacts: [
                        [artifactId: 'add2vals',
