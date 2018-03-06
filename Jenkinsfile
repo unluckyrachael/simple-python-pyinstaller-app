@@ -41,15 +41,7 @@ pipeline {
                 }
             }
         }
-        stage("s3_upload") {
-           agent any
-           steps {
-               // Upload deployment assets to S3
-               sh "whoami"
-               sh "aws s3 cp dist/add2vals s3://rtt-jenkins-bucket/training1/add2vals --region us-east-2 --acl public-read-write"
-            }
-        }
-        stage("NexusPublish") {
+        stage("Publish") {
            agent any
            steps {
                nexusArtifactUploader(
