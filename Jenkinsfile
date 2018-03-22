@@ -47,7 +47,7 @@ pipeline {
                nexusArtifactUploader(
                    nexusVersion: 'nexus3',
                    protocol: 'http',
-                   nexusUrl: 'ec2-18-219-152-113.us-east-2.compute.amazonaws.com:8081',
+                   nexusUrl: 'nexus.roundtower.io:8081',
                    groupId: 'apps',
                    version: '1.0',
                    repository: 'rtt-snapshot',
