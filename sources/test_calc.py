@@ -1,3 +1,6 @@
+"""
+Tests to verify functionality of the add2vals function
+"""
 import unittest
 import calc
 
@@ -44,7 +47,7 @@ class TestCalc(unittest.TestCase):
         result = calc.add2('abc', '5.5')
         self.assertEqual(result, 'abc5.5')
 
-    def test_add_negative_and_positive_number(self):
+    def test_add_neg_and_pos_num(self):
         """
         Test the addition of a negative number and a positive number
         """
