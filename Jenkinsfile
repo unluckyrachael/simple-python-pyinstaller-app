@@ -33,11 +33,11 @@ pipeline {
                 }
             }
             steps {
-                sh 'cp -r sources/add2vals.py dist/add2vals'
+                sh 'ls -la sources/add2vals.py'
             }
             post {
                 success {
-                    archiveArtifacts 'dist/add2vals'
+                    archiveArtifacts 'sources/add2vals.py'
                 }
             }
         }
@@ -55,7 +55,7 @@ pipeline {
                    artifacts: [
                        [artifactId: 'add2vals',
                         classifier: '',
-                        file: 'dist/add2vals',
+                        file: 'sources/add2vals.py',
                         type: '']
                    ]
                )
