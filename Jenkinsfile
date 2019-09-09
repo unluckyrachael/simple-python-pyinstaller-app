@@ -33,7 +33,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'cp sources/add2vals.py dist/add2vals'
+                sh 'cp -r sources/add2vals.py dist/add2vals'
             }
             post {
                 success {
